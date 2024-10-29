@@ -2,7 +2,13 @@ const mongoose = require('mongoose')
 
 // latest events and news 
 exports.eventPost= (req,res) =>{
-    res.render()
+    try{
+        const eventImage = req.file
+    }
+    catch(error){
+        console.error('Event posting failed :',error)
+        res.status(500).send('An error occured while posting the event')
+    }
 }
 
 // student activities 

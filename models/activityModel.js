@@ -1,19 +1,19 @@
 const mongoose = require('mongoose')
 
 const activitySchema = new mongoose.Schema({
-    programme : {
+    activityProgramme : {
         type : String,
         required : true 
     },
-    description : {
+    activityDescription : {
         type : String,
         required : true
     },
-    image : {
+    activityImage : {
         type : String,
         required : true 
     }
 })
 
-const collection = new mongoose.Model("activity",activitySchema)
+const collection = new mongoose.model("activity",activitySchema)
 module.exports= collection

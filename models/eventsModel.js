@@ -1,18 +1,18 @@
 const mongoose = require('mongoose')
 
 const eventSchema = new mongoose.Schema({
-    programme : {
+    eventProgramme : {
         type : String,
         required : true
     },
-    description : {
+    eventDescription : {
         type : String,
         required : true 
     },
-    image : {
+    eventImage : {
         type : String,
         required : true
     }
 })
-const collection = new mongoose.Model("events",eventSchema)
+const collection = new mongoose.model("events",eventSchema)
 module.exports = collection

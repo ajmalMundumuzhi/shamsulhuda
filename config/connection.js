@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 async function dbConnect(){
     await mongoose.connect(process.env.MONGOURL,{
-        dbName : 'shia'
+        dbName : 'shiasample'
     })
     .then(()=>{ 
         console.log("Mongodb connected succesfully")
