@@ -4,6 +4,9 @@ require('dotenv').config()
 const app = express()
 const port = process.env.PORT
 
+const client = require('./routes/clientRouter')
+app.use('/',client)
+
 dbConnect()
 .then(()=>{
     app.listen(port, ()=>{
